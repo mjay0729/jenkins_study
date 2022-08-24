@@ -1,0 +1,164 @@
+name,description,type,attributeClass,base_feature_group
+sex,,String,label,gender
+age_range,,String,label,age
+region,,String,label,region
+occupation,,String,label,occupation
+followees,라인 메신저 내 유저의 친구 수,BIGINT,continuous/range,friends
+followers,라인 메신저 내 유저를 친구로 추가한 사람 수,BIGINT,continuous/range,friends
+bothways,라인메신저 내 상호 친구 추가한 사람 수,BIGINT,continuous/range,friends
+Marital status,"혼인 상태
+Single, Married, Unspecified",String,label,relationship_status
+Parents,"parents 유형 (아래와 같이 6가지 유형으로 정의)
+New parents 
+Parents with baby 
+Parents with kids
+Parents with teenagers 
+Parents with adult children 
+Unspecified",String,label,relationship_status
+Marriage,"결혼 이벤트 도래 점수 
+0-100",float,continuous/range,upcoming_events
+The birth of child,"아이 탄생 이벤트 도래 점수
+0-100",float,,upcoming_events
+Moved house,"이사 이벤트 도래 점수
+0-100",float,,upcoming_events
+large_category,,String,label,interest
+small_category,,String,label,interest
+device os,,String,label,mobile_activities
+app_version,,String,label,mobile_activities
+purchase_related_user_segment,"paid user 대상
+S21, S22, S23, ... , S30",String,label,purchase_activities
+온라인 구매 선호도,"온라인 구매 선호 점수 
+0-100
+ 여기를 클릭하여 펼치기...
+(방법)
+line shopping 및 lacore에서의 체류 시간 및 빈도, online shop 관련 oa 반응 건수 활용하여 예측",BIGINT,continuous/range,purchase_activities
+오프라인 구매 선호도,"오프라인 구매 선호 점수
+0-100
+ 여기를 클릭하여 펼치기...",BIGINT,continuous/range,purchase_activities
+절약형 구매 선호도,"절약형 구매 선호 점수
+0-100
+ 여기를 클릭하여 펼치기...",BIGINT,continuous/range,purchase_activities
+app_launch_related_user_segment,"launched user 대상
+S0, S1, S2, ... , S8",String,label,line_app_activities
+App 최근 접속일,"launched user 가 최근 접속한 날짜
+20220712",String,date,line_app_activities
+App 접속 빈도,launched user 가 최근 28일 동안 접속한 일수,BIGINT,continuous/range,line_app_activities
+App 접속 횟수,launched user 가 최근 28일 동안 접속한 횟수,BIGINT,continuous/range,line_app_activities
+App 체류 시간,launched user 가 최근 28일 체류한 시간,BIGINT,continuous/range,line_app_activities
+접속 선호 시간대,"line app 접속을 선호하는 시간대
+6-10, 10-14, 14-18, 18-22, 22-2, 2-6",String,label,line_app_activities
+접속 선호 요일,"line app 접속을 선호하는 요일 
+mon, tues, weds, thur, fri, sat, sun",String,label,line_app_activities
+message_related_user_segment,"active user 대상
+S21, S22, S23, ... , S30",String,label,oa_activities
+Message 반응 건수,,BIGINT,continuous/range,oa_activities
+Message block 건수,,BIGINT,continuous/range,oa_activities
+online shop 반응 건수,,BIGINT,continuous/range,oa_activities
+offline shop 반응 건수,,BIGINT,continuous/range,oa_activities
+반응 선호 시간대,"oa message 반응을 선호하는 시간대
+6-10, 10-14, 14-18, 18-22, 22-2, 2-6",String,label,oa_activities
+반응 선호 요일,"oa message 반응을 선호하는 요일
+mon, tues, weds, thur, fri, sat, sun",String,label,oa_activities
+Message 피로도,"oa message 피로도
+0-100
+ ",INT/FLOAT,continuous/range,oa_activities
+선호 message 카테고리,,String,label,oa_activities
+비선호 message 카테고리,,String,label,oa_activities
+recent_date,약 한달(28일) 동안의 최근 접속일,Date,date,wallet_common
+frequency,약 한달(28일) 동안의 총 접속 일수,int,continuous/range,wallet_common
+user_segment,"약 한달(28일) 동안의 접속횟수, 클릭횟수를 고려한 user segment",String,label,wallet_common
+view_count,약 한달(28일) 동안의 총 view,int,continuous/range,wallet_common
+click_count,약 한달(28일) 동안의 총 click,int,continuous/range,wallet_common
+ctr,약 한달(28일) 동안의 ctr,int,continuous/range,wallet_common
+prf_visit_time,"약 한달(28일) 동안 wallet 접속을 선호하는 시간대
+선호의 기준 = 시간대별 접속 비율 ",String,label,wallet_common
+prf_visit_dow,"약 한달(28일) 동안 wallet 접속을 선호하는 요일
+선호의 기준 = 시간대별 접속 비율",String,label,wallet_common
+prf_module,"약 한달(28일) 동안 wallet 내 유저가 선호하는 모듈
+선호의 기준 = 모듈별 클릭 비율",String,label,wallet_common
+prf_tab,"약 한달(28일) 동안 wallet 내 유저가 선호하는 탭
+선호의 기준 = 탭별 클릭 비율",String,label,wallet_common
+최근 접속일,,date,date,pointclub
+접속 빈도,,int,continuous/range,pointclub
+접속 횟수,,int,continuous/range,pointclub
+user_segment,,String,label,pointclub
+view,,int,continuous/range,pointclub
+click,,int,continuous/range,pointclub
+ctr,,int,continuous/range,pointclub
+conversion,popup page 기준 conversion 횟수,int,continuous/range,pointclub
+접속 선호 시간대,"Pointclub 접속을 선호하는 시간대
+6-10, 10-14, 14-18, 18-22, 22-2, 2-6",String,label,pointclub
+접속 선호 요일,"Pointclub 접속을 선호하는 요일
+mon, tues, weds, thur, fri, sat, sun",String,label,pointclub
+포인트 보유량,,int,continuous/range,pointclub
+선호 item,,String,label,pointclub
+포인트 적립 수단,,String,label,pointclub
+최근 접속일,,date,date,coupon
+접속 빈도,,int,continuous/range,coupon
+접속 횟수,,int,continuous/range,coupon
+user segment,,String,label,coupon
+view,,int,continuous/range,coupon
+click,,int,continuous/range,coupon
+ctr,,int,continuous/range,coupon
+접속 선호 시간대,"Coupon 접속을 선호하는 시간대
+6-10, 10-14, 14-18, 18-22, 22-2, 2-6",String,label,coupon
+접속 선호 요일,"Coupon 접속을 선호하는 요일
+mon, tues, weds, thur, fri, sat, sun",String,label,coupon
+선호 쿠폰 카테고리,선호하는 쿠폰 카테고리,String,label,coupon
+최근 접속일,,date,date,my_card
+접속 빈도,,int,continuous/range,my_card
+접속 횟수,,int,continuous/range,my_card
+user segment,,String,label,my_card
+view,,int,continuous/range,my_card
+click,,int,continuous/range,my_card
+ctr,,int,continuous/range,my_card
+접속 선호 시간대,"My card 접속을 선호하는 시간대
+6-10, 10-14, 14-18, 18-22, 22-2, 2-6",String,label,my_card
+접속 선호 요일,"My card 접속을 선호하는 요일
+mon, tues, weds, thur, fri, sat, sun",String,label,my_card
+등록된 카드 provider,"라인 스타벅스, 폰타, 공차, 이케아, 구글플레이, 무인양품 etc",String,label,my_card
+등록된 카드 카테고리,"포인트 카드, 카페 푸드, 인테리어 잡화, 패션, 뷰티, others",String,label,my_card
+최근 접속일,,date,date,EC
+접속 빈도,,int,continuous/range,EC
+접속 횟수,,int,continuous/range,EC
+user segment,,String,label,EC
+view,,int,continuous/range,EC
+click,,int,continuous/range,EC
+ctr,,int,continuous/range,EC
+접속 선호 시간대,"EC 접속을 선호하는 시간대
+6-10, 10-14, 14-18, 18-22, 22-2, 2-6",String,label,EC
+접속 선호 요일,"EC 접속을 선호하는 요일
+mon, tues, weds, thur, fri, sat, sun",String,label,EC
+선호 line shopping merchant,선호하는 line shopping merchant,String,label,EC
+선호 lacore brand,선호하는 lacore brand,String,label,EC
+선호 구매 카테고리,선호하는 구매 카테고리,String,label,EC
+최근 접속일,,date,date,chirashi
+접속 빈도,,int,continuous/range,chirashi
+접속 횟수,,int,continuous/range,chirashi
+user segment,,String,label,chirashi
+view,,int,continuous/range,chirashi
+click,,int,continuous/range,chirashi
+ctr,,int,continuous/range,chirashi
+접속 선호 시간대,"Chirashi 접속을 선호하는 시간대
+6-10, 10-14, 14-18, 18-22, 22-2, 2-6",String,label,chirashi
+접속 선호 요일,"Chirashi 접속을 선호하는 요일
+mon, tues, weds, thur, fri, sat, sun",String,label,chirashi
+선호 사용 지역,,String,label,chirashi
+최근 접속일,,date,date,stockindex
+접속 빈도,,int,continuous/range,stockindex
+접속 횟수,,int,continuous/range,stockindex
+user segment,,String,label,stockindex
+view,,int,continuous/range,stockindex
+click,,int,continuous/range,stockindex
+ctr,,int,continuous/range,stockindex
+접속 선호 시간대,"Stockindex 접속을 선호하는 시간대
+6-10, 10-14, 14-18, 18-22, 22-2, 2-6",String,label,stockindex
+접속 선호 요일,"Stockindex 접속을 선호하는 요일
+mon, tues, weds, thur, fri, sat, sun",String,label,stockindex
+계좌 개설 여부,-,String,label,stockindex
+선호 종목,-,String,label,stockindex
+view,,int,continuous/range,Ladm
+click,,int,continuous/range,Ladm
+ctr,,int,continuous/range,Ladm
+user_segment,,String,label,Ladm
+선호 광고 카테고리,선호하는 광고 카테고리,String,label,Ladm

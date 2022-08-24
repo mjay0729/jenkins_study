@@ -1,0 +1,1 @@
+export const BaseFeatureAPI = 'http://lab.bigle.ai:9000/api/baseFeature/group';

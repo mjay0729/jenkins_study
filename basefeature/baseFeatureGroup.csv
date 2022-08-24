@@ -1,0 +1,28 @@
+baseFeatureGroup 이름(name),상위 BaseFeatureGroup,description,totalCount,depthPath
+demographic,-,-,-,demographic
+gender,demographic,-,0,demographic/gender
+age,demographic,-,0,demographic/age
+region,demographic,-,0,demographic/region
+occupation,demographic,-,0,demographic/occupation
+relationship,-,-,-,relationship
+friends,relationship,-,0,relationship/friends
+relationship_status,relationship,,,relationship/relationship_status
+life_events,-,-,0,life_events
+upcoming_events,life_events,,,life_events/upcoming_events
+interest,-,,,interest
+large_category,interest,,,interest/large_category
+small_category,interest,,,interest/small_category
+activity,-,-,-,activity
+mobile_activities,activity,,,activity/mobile_activities
+purchase_activities,activity,,,activity/purchase_activities
+line_app_activities,activity,,,activity/line_app_activities
+oa_activities,activity,-,-,activity/oa_activities
+service_activities,-,,,service_activities
+wallet_common,service_activities,,-,service_activities/wallet_common
+pointclub,service_activities,,,service_activities/pointclub
+coupon,service_activities,최근 접속일,,service_activities/coupon
+my_card,service_activities,,,service_activities/my_card
+ec,service_activities,,,service_activities/ec
+chirashi,service_activities,,,service_activities/chirashi
+stockindex,service_activities,,,service_activities/stockindex
+ladm,service_activities,,,service_activities/ladm
